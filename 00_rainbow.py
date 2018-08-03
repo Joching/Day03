@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
 
-#Joshua Ching ; This code will take your per ------finish later---------
-# (running your code?)
+#Joshua Ching ; Prints colored text. 
+#Follow the promts. Type "Rainbow" to have the word rainbow printed in rainbow colors
 #By Joching
+#------------------------------------------------------------
 
 import sys
 
-
-def start_function():
+def main():
     a = input('What do you want to print? ')
-    if a == 'RAINBOW':
+    if a.lower() == 'rainbow':
         sys.stdout.write('\033[31mR\033[0m')
         sys.stdout.write('\033[32mA\033[0m')
         sys.stdout.write('\033[33mI\033[0m')
@@ -18,10 +18,10 @@ def start_function():
         sys.stdout.write('\033[31mO\033[0m')
         sys.stdout.write('\033[32mW\033[0m')
 
-        print('\n')
+        print('')
     else:
         b = input('What color do you want the text to be?\nBlack = 30\nRed = 31\nGreen = 32\nYellow = 33\nBlue = 34\nPurple = 35\nCyan = 36\nWhite = 37\n')
-        c = input('What kind of font/formatting do you want?\nNo Effect = 0\nBold = 1\nUnderline = 2\nNegative1 = 3\nNegative2 = 5\n')
+        c = input('What kind of font/formatting do you want?\n(No color) = 0\n(Color) = 1\nUnderline = 4\n')
         d = input('What color do you want the background to be?\nBlack = 40\nRed = 41\nGreen = 42\nYellow = 43\nBlue = 44\nPurple = 45\nCyan = 46\nWhite = 47\n')
         b = int(b)
         c = int(c)
@@ -31,11 +31,9 @@ def start_function():
             print('\033[{1};{2};{3}m {0} \033[0m'.format(a,b,c,d))
         white_colorful_text(a,b,c,d)
 
+main()
 
-start_function()
-
-
-
+# Old code below----------------------------------------------
 
 # import sys
 
